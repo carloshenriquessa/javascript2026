@@ -1,13 +1,17 @@
-//var pode mudar a váriavel
-//let só pode mudar se for blocos diferentes
-//const nunca muda
+const carro = {
+    marca: "ford",
+    modelo: "KA",
+    ano: 2015,
+    placa: "ABC1E34",
 
-var valor1, valor2, total;
+    buzina: function(){
+        alert('Biiiiiiiiiiiii')
+    },
 
-valor1 = 5;
-valor2 = 7;
+    completo: function() {
+        return "A marca é " + this.marca + " e o modelo é " + this.modelo + " do ano " + this.ano + ", sua placa é " + this.placa
+    }
+}
 
-total = --valor1;
+console.log(carro.completo());
 
-alert(total);
-alert('O valor1 ficou: ' + valor1 )
