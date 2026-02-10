@@ -1,6 +1,14 @@
-const pessoa = ["Carlos", "Sá", 21, "Aluno"]; //array
-const x = "Souza"
+function verificar(){
+    let nome = document.getElementById("nome").value;
 
-pessoa[pessoa.length] = "Casado";
+    if (nome == "" || nome == null){
+        let p =document.getElementById("teste");
+        p.innerHTML = "O campo não pode ser vazio!";
+        p.style.color = "red";
+    } else {
+        let p =document.getElementById("teste");
+        p.innerHTML = "Parabéns, tudo certo!";
+        p.style.color = "green";
+    }
+}
 
-console.log(Array.isArray(x));
