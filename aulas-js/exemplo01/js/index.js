@@ -1,6 +1,17 @@
-const carros = [" Gol", " Fusca", " Brasilia", " Del Rey", " Chevette"];
-var tamanho = carros.length;
+function ativarContagem(){
+    //document.getElementById('tempo').innerHTML = "Começou a contar!";
+    //tempo = setTimeout(function(){ 
+        //document.body.style.backgroundColor = "blue";
+     //}, 5000);
 
-for (let i = 0; i < tamanho; i++){
-    document.getElementById("teste").innerHTML += carros[i] + " - ";
+     tempo = setInterval(function(){  
+        var cronometro = document.getElementById("tempo").innerHTML;
+        var soma = parseInt(cronometro) + 1;
+        document.getElementById('tempo').innerHTML = soma;
+       }, 1000)
+}
+
+function pararContagem(){
+    clearInterval(tempo);
+    //document.getElementById('tempo').innerHTML = "Parou a contagem!";
 }
